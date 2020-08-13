@@ -1,3 +1,8 @@
+@font-face {
+  font-family: MoolBor;
+  src: url(/fonts/moolbor.ttf);
+}
+
 body, html {
   height: 100%;
   width: 100%;
@@ -6,7 +11,7 @@ body, html {
 
 
 h1, h2, h3, h4, a {
-    font-family: 'Rowdies', cursive;
+  font-family: 'MoolBor', serif;
 }
 
 .topfix{
@@ -18,9 +23,9 @@ h1, h2, h3, h4, a {
   height: 6vh;
   width: 100%;
   /*position: fixed;*/
-  background-color: #000000;
+  background-color: #ffff;
   /* box-shadow: 0 7px 3px -5px #ae8d0b;*/
-  box-shadow: 0 0 7px #000000;
+  /*box-shadow: 0 0 7px #000000;*/
   position: relative;
 }
 
@@ -42,12 +47,14 @@ h1, h2, h3, h4, a {
   display: inline-block;
   float: right;
   padding: 0;
+  position: absolute;
+  right: 5.8%;
 }
 
 .header ul li{
   display: inline-block;
   width: fit-content;
-  margin: 0px 10px;
+  margin: 0px 6px;
 }
 
 .header ul li a img{
@@ -64,8 +71,11 @@ h1, h2, h3, h4, a {
  /*position: fixed;*/
  background-color: #fff;
  /* box-shadow: 0 7px 3px -5px #ae8d0b;*/
- box-shadow: 0 0 7px #000000;
+ /*box-shadow: 0 0 7px #000000;*/
  position: relative;
+ -webkit-box-shadow: 0 8px 6px -6px #adadad;
+ -moz-box-shadow: 0 8px 6px -6px #adadad;
+ box-shadow: 0 8px 6px -6px #adadad;
 }
 
 .menu .left{
@@ -79,97 +89,191 @@ h1, h2, h3, h4, a {
 }
 
 .menu .right{
-  list-style: none;
-  margin: 0;
-  line-height: 40px;
-  width: fit-content;
-  display: inline-block;
-  float: right;
-  padding: 0;
+ /* display: none !important;*/
+ list-style: none;
+ margin: 0;
+ line-height: 40px;
+ width: fit-content;
+ display: inline-block;
+ float: right;
+ padding: 0;
+ position: absolute;
+ right: 5.8%;
 }
 
+.menu button{
+  width: fit-content;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'MoolBor', serif;
+  letter-spacing: 2px;
+  color: #000000;
+}
+
+.menu .dropdown{
+  width: fit-content;
+  display: inline-block;
+  margin: 0px 0px 0px 30px;
+}
+/*
 .menu ul li{
   display: inline-block;
   width: fit-content;
-  margin: 0px 0px 0px 10px;
-}
+  margin: 0px 0px 0px 40px;
+  }*/
 
-.topfix a{
-  font-family: 'Rowdies', cursive;
-  letter-spacing: 2px;
-  color: #ae8d0b;
-}
+  .header a{
+    font-size: 14px;
+    font-family: 'MoolBor', serif;
+    letter-spacing: 1px;
+    color: #000000;
+    font-weight: 500;
+  }
 
-.menu ul li a img{
-  width: 16px;
-}
+  .header a span{
+    font-size: 13px;
+    font-weight: initial; 
+  }
 
-.menu .lang{
-  width: 21px !important;
-}
+  .dropdown-menu{
+    top: 86% !important;
+    border:none !important;
+    border-radius: initial !important;
+    margin: 0 !important;
+    padding: 0px !important;
+  }
 
-.banner{
-  position: absolute;
-  height: 85vh;
-  /*box-shadow: 0 0 7px #000000;*/
-  width: 100%;
-  /*background-color: red;*/
-  top: 12vh;
-}
+/*.menu ul{
+  display: none;
+  }*/
 
-.banner img{
-  min-height: 88vh;
-}
+  .shipto{
+    text-decoration: underline;
+  }
 
-.holder a{
-  position: absolute;
-  bottom: 20px;
-  color: #fff;
-  background-color: #ae8d0b;
-  font-family: 'Rowdies', cursive;
-  letter-spacing: 2px;
-  padding: 12px 30px;
-  border-radius: 0px;
-  right: 0;
-  left: 0;
-  width: fit-content;
-  margin: 0 auto;
-}
+  .menu a{
+    font-size: 16px;
+    font-family: 'MoolBor', serif;
+    letter-spacing: 2px;
+    color: #000000;
+    padding: 12px 20px 6px 20px !important;
+    /*font-weight: 500;*/
+  }
+  .menu button i{
+    vertical-align: middle;
+    margin-bottom: 3.4px;
+    margin-left: 4px;
+  }
 
-.products{
-  padding: 50px;
-   box-shadow: 0 0 7px #000000;
-}
+  .menu ul li a img{
+    width: 16px;
+  }
 
-.products .rings{
-  height: 200px;
-  width: 100%;
-  background-image: url(/assets/rings.jpg);
+  .menu .lang{
+    width: 21px !important;
+  }
+
+  .banner{
+    position: absolute;
+    height: 85vh;
+    /*box-shadow: 0 0 7px #000000;*/
+    width: 100%;
+    /*background-color: red;*/
+    top: 12vh;
+  }
+
+  .banner img{
+    min-height: 88vh;
+  }
+
+  .holder a{
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    background-color: #ae8d0b;
+    font-family: 'MoolBor', serif;
+    letter-spacing: 2px;
+    padding: 12px 30px;
+    border-radius: 0px;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .products{
+    padding: 50px 30px 10px 30px;
+    /*box-shadow: 0 0 7px #000000;*/
+  }
+
+  .products .rings{
+  /*height: 200px;
+  width: 100%;*/
+  background-image: url(/assets/images/IMG_0165a.jpg);
   background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-     margin-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 40px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .products h1{
-  line-height: 200px;
-   font-family: 'Rowdies', cursive;
+  /*line-height: 300px;*/
+  font-family: 'MoolBor', serif;
   letter-spacing: 2px;
   color:  #ffffff;
-   -webkit-text-stroke-width: 0.6px;
-  -webkit-text-stroke-color: #ae8d0b;
+  margin: 0;
+  height: fit-content;
   width: 100%;
-    margin: 0;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 6px 5px 6px;
 }
 
 .products .bracelet{
-  height: 200px;
-  width: 100%;
-  background-image: url(/assets/image2.jpg);
-  background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 40px;
+ /* height: 200px;
+ width: 100%;*/
+ background-image: url(/assets/images/IMG_0297.jpg);
+ background-position: 50%;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-bottom: 40px;
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.products .earings{
+ /* height: 200px;
+ width: 100%;*/
+ background-image: url(/assets/images/IMG_0247a.jpg);
+ background-position: 50%;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-bottom: 40px;
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.products .necklaces{
+ /* height: 200px;
+ width: 100%;*/
+ background-image: url(/assets/images/IMG_0346.jpg);
+ background-position: 50%;
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-bottom: 40px;
+ height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .deals{
@@ -178,8 +282,14 @@ h1, h2, h3, h4, a {
 }
 
 .deals h1{
-  margin-bottom: 40px;
-  color: #ae8d0b;
+ margin-bottom: 40px;
+ font-size: 26px;
+ color: #ae8d0b;
+ letter-spacing: 2px;
+ font-weight: bold;
+ height: fit-content;
+ width: 100%;
+ text-align: center;
 }
 
 .rings:hover, .bracelet:hover{
@@ -188,15 +298,15 @@ h1, h2, h3, h4, a {
 
 .deals img{
   height: 250px;
-    width: 100%;
-    object-fit: cover;
-    min-height: initial !important;
+  width: 100%;
+  object-fit: cover;
+  min-height: initial !important;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-    height: 250px;
+  height: 250px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -244,40 +354,43 @@ h1, h2, h3, h4, a {
 }
 
 .deals p{
-  font-family: 'Lato', sans-serif;
+  font-family: 'MoolBor', serif;
   color: black;
 }
 
 .flip-card-back a{
   color: #fff;
-    background-color: #ae8d0b;
-    font-family: 'Rowdies', cursive;
-    letter-spacing: 2px;
-    padding: 12px 30px;
-    text-transform: uppercase;
+  background-color: #ae8d0b;
+  font-family: 'MoolBor', serif;
+  letter-spacing: 2px;
+  padding: 12px 30px;
+  text-transform: uppercase;
 }
 
 .flipcta{
   position: absolute;
-    bottom: 17px;
-    right: 0;
-    left: 0;
+  bottom: 17px;
+  right: 0;
+  left: 0;
 }
 
 .gifts{
-  padding: 50px;
+  padding: 20px;
 }
 
 .gifts h1{
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  font-size: 26px;
   color: #ae8d0b;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .gifts img{
   height: 250px;
-    width: 100%;
-    object-fit: cover;
-    min-height: initial !important;
+  width: 100%;
+  object-fit: cover;
+  min-height: initial !important;
 }
 
 .gifts h2{
@@ -286,7 +399,7 @@ h1, h2, h3, h4, a {
 }
 
 .gifts p{
-  font-family: 'Lato', sans-serif;
+  font-family: 'MoolBor', serif;
   color: black;
 }
 
@@ -294,26 +407,28 @@ h1, h2, h3, h4, a {
  height: 3vh;  
  overflow: hidden;
  position: relative;
- background: #ae8d0b;
- color: #ffffff;
- border-bottom: 0.5px solid black;
+ background: #e2e2e2;
+ color: black;
+ /*border-bottom: 0.5px solid black;*/
 }
 .scroll-left p {
-  font-family: 'Lato', sans-serif;
- position: absolute;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 3vh;
- text-align: center;
- /* Starting position */
- -moz-transform:translateX(100%);
- -webkit-transform:translateX(100%);  
- transform:translateX(100%);
- /* Apply animation to this element */  
- -moz-animation: scroll-left 30s linear infinite;
- -webkit-animation: scroll-left 30s linear infinite;
- animation: scroll-left 30s linear infinite;
+  font-family: 'MoolBor', serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 3vh;
+  text-align: center;
+  /* Starting position */
+  -moz-transform:translateX(100%);
+  -webkit-transform:translateX(100%);  
+  transform:translateX(100%);
+  /* Apply animation to this element */  
+  -moz-animation: scroll-left 30s linear infinite;
+  -webkit-animation: scroll-left 30s linear infinite;
+  animation: scroll-left 30s linear infinite;
+  padding-top: 3px;
+  letter-spacing: 1px;
 }
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left {
@@ -326,32 +441,41 @@ h1, h2, h3, h4, a {
 }
 @keyframes scroll-left {
  0%   { 
- -moz-transform: translateX(100%); /* Browser bug fix */
- -webkit-transform: translateX(100%); /* Browser bug fix */
- transform: translateX(100%);     
+   -moz-transform: translateX(100%); /* Browser bug fix */
+   -webkit-transform: translateX(100%); /* Browser bug fix */
+   transform: translateX(100%);     
  }
  100% { 
- -moz-transform: translateX(-100%); /* Browser bug fix */
- -webkit-transform: translateX(-100%); /* Browser bug fix */
- transform: translateX(-100%); 
+   -moz-transform: translateX(-100%); /* Browser bug fix */
+   -webkit-transform: translateX(-100%); /* Browser bug fix */
+   transform: translateX(-100%); 
  }
 }
 
 .trial{
-  padding: 50px;
-  background-color: #ae8d0b;
+/*  padding: 50px;
+background-color: #ae8d0b;*/
+position: relative;
+background-image: url(/assets/images/housetrial.png);
+background-position: 50%;
+background-repeat: no-repeat;
+background-size: cover;
+margin-bottom: 10px;
+height: 300px;
+box-shadow: 0 8px 6px -6px #adadad;
 }
 
 .trial h1{
+  font-family: 'MoolBor', serif;
   margin-bottom: 40px;
   text-transform: uppercase;
 }
 
 .trial img{
   height: 250px;
-    width: 100%;
-    object-fit: cover;
-    min-height: initial !important;
+  width: 100%;
+  object-fit: cover;
+  min-height: initial !important;
 }
 
 .trial h2{
@@ -360,16 +484,294 @@ h1, h2, h3, h4, a {
 }
 
 .trial p{
-  font-family: 'Lato', sans-serif;
-  color: #fff;
+  font-family: 'MoolBor', serif;
+  color: black;
   margin-bottom: 40px;
+  font-size: 28px
 }
 
 .trial a{
   color: #fff;
-    background-color: black;
-    font-family: 'Rowdies', cursive;
-    letter-spacing: 2px;
-    padding: 12px 30px;
+  background-color: #35c5e8;
+  font-family: 'MoolBor', serif;
+  letter-spacing: 2px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+}
+
+.logo{
+  width: 20%;
+  position: absolute;
+  top: 65%;
+  z-index: 999;
+  left: 4%;
+}
+
+/*.ship a{
+  font-size: 11px !important;
+  letter-spacing: initial !important;
+  }*/
+
+  .ship img{
+    width: 17px !important;
+    vertical-align: middle !important;
+    margin-bottom: 1.5px !important;
+    margin-left: 5px;
+  }
+
+  .trial-right{
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    position: absolute;
+    top: 14%;
+    right: 4%;
+  }
+
+  .dropdown-menu>li>a{
+    line-height: inherit !important;
+  }
+
+  .dropdown-menu>li>a:hover{
+    color: #ae8d0b;
+  }
+
+
+  .modalstyle .modal-inner {
+    padding: 30px 15px 60px 15px;
+  }
+
+  .modalstyle .modal-inner p{
+    font-family: Raleway;
+  }
+
+  .modalstyle .modal-inner button{
+    color: #fff;
+    background: #ae8d0b;
+    font-family: 'MoolBor', serif;
+    padding: 12px 30px 6px 30px;
+    border-radius: 0px;
+    width: fit-content;
+    margin: 0 auto;
     text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 15px;
+    float: right;
+    margin-bottom: 30px;
+  }
+
+  .ringsmain{
+    width: 100%;
+    position: absolute;
+    top: 12vh;
+    padding: 50px 30px 30px 30px;
+  }
+
+  .ringsmain h1{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 48px;
+    color: #ae8d0b;
+    margin-bottom: 70px;
+  }
+
+  .ringsmain .prodimg{
+    width: 100%;
+  }
+
+  .ringsmain .prodimg1{
+    width: 55%;
+  }
+
+  .ringsmain .flip-card{
+    height: 385px !important;
+    margin-bottom: 120px;
+  }
+
+  .ringsmain .flip-bottom{
+    display: block;
+    width: 100%;
+  }
+
+
+  .ringsmain h2{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 26px;
+    display: inline-block;
+    width: fit-content;
+    position: absolute;
+    left: 18px;
+    margin: 0;
+  }
+
+  .ringsmain .flip-card-back{
+    padding-top: 30px;
+  }
+
+  .ringsmain .flip-card-back a{
+    background-color: transparent;
+    color: #ae8d0b;
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    padding: 8px 30px 0px 30px;
+    font-size: 17px;
+  }
+
+  .ringsmain h3{
+   font-family: 'Noto Sans JP', sans-serif;
+   font-size: 14px;
+   letter-spacing: 2px;
+   display: inline-block;
+   position: absolute;
+   right: 15px;
+   margin: 0;
+   line-height: 26px;
+ }
+
+ .cross{
+  text-decoration: line-through solid red;
+  font-size: 12px;
+  margin-left: 5px;
+  letter-spacing: 1px;
+}
+
+.filter-sort{
+  position: relative;
+  width: 100%;
+}
+
+.filter-sort .filter{
+  width: 49%;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: -44px;
+  text-align: left;
+}
+
+.filter-sort .sort{
+  width: 49%;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: -44px;
+  text-align: right;
+}
+
+.filter-sort h4{
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+}
+
+
+.filter-sort a{
+  color: black;
+}
+
+.filterimg{
+  width: 19px;
+  display: inline-block;
+}
+
+.filter-sort i{
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 480px){
+  .menu .right{
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    margin: 0 auto;
+  }
+
+  .shipto{
+    display: none;
+  }
+
+  .menu .dropdown{
+   margin: 0px 10px 0px 10px;
+  }
+
+  .header ul li a img{
+    width: 13px;
+  }
+
+  .menu button{
+    padding: 0;
+  }
+
+  .header ul li{
+    margin: 0px 3px
+  }
+
+  .logo {
+    width: 39%;
+    position: absolute;
+    top: 31%;
+    z-index: 999;
+    left: 4%;
+  }
+
+  .header .right{
+    right: 1.8%;
+  }
+  .ringsmain .filter-sort h4 {
+    font-size: 16px;
+  }
+  .ringsmain .flip-card{
+    height: 350px !important;
+    margin-bottom: 60px !important;
+  }
+
+  .ringsmain .flip-card-front{
+    height: 100% !important;
+  }
+
+    .ringsmain .flip-card-inner{
+      height: 100% !important;
+    }
+
+    .ringsmain .prodimg1 {
+        width: 45%;
+    }
+
+    .cross{
+      margin-left: 2px;
+    }
+
+    .ringsmain h3{
+      right: 17px;
+    }
+
+    .ringsmain h3, .ringsmain h2{
+      font-size: 12.5px;
+    }
+}
+
+@media screen and (max-width: 400px){
+  .menu .dropdown {
+      margin: 0px 5px 0px 5px;
+  }
+
+  .ringsmain .flip-card-front, .ringsmain .flip-card-inner{
+    height: 100% !important;
+  }
+
+  .ringsmain .flip-card{
+    height: 315px !important;
+  }
+
+  .ringsmain h3{
+    font-size: 13px;
+  }
 }

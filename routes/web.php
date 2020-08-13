@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('homepage');
 });
+
+
+Route::get('/ip_check', 'FrontendController@ip_check')->name("ip_check");
+
+Route::get('/rings', 'RouteDataController@fetchrings')->name("rings");
