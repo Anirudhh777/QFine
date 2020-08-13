@@ -76,6 +76,7 @@
     
   </div>
 </div>
+@include('footer')
 <!-- <div class="gifts">
   <div class="container text-center">
     <h1>GIFTING OPTIONS</h1>

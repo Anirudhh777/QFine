@@ -40,7 +40,7 @@
           <li><a href=""><img src="{{ asset('assets/images/global.png') }}"></a></li>
           <li><a href=""><img src="{{ asset('assets/images/english.png') }}" class="lang"></a></li>
         </ul> -->
-        <img src="{{ asset('assets/images/logo.png') }}" class="logo">
+         <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logo.png') }}" class="logo"></a>
         <ul class="right">
          <li class="ship"><a href="#"><img src="{{ asset('assets/images/flags/united-arab-emirates.svg') }}" class="countryflag"></a></li>
          <!-- <li><a href=""> کرنسی <img src="{{ asset('assets/images/global.png') }}"></a></li> -->
