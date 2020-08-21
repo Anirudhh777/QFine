@@ -22,7 +22,7 @@
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -44,7 +44,7 @@
 						<img src="{{ asset('/assets/images/products/product2.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -64,7 +64,7 @@
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -84,7 +84,7 @@
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -104,7 +104,7 @@
 						<img src="{{ asset('/assets/images/products/product2.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -126,7 +126,7 @@
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -146,7 +146,7 @@
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -166,7 +166,7 @@
 						<img src="{{ asset('/assets/images/products/product2.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -186,7 +186,7 @@
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
 							<a href="">View</a>
-							<a href="">Add to Wish List</a>
+							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
 
@@ -206,33 +206,5 @@
 		<button class="paginate right pagebtn"><i></i><i></i></button>
 	</div>
 	@include('footer')
-</div>
-
-
-<div id="filtermodal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-body">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h1>Filter PopUp</h1>
-			</div>
-		</div>
-
-	</div>
-</div>
-<div id="sortmodal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-body">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h1>Sort PopUp</h1>
-			</div>
-		</div>
-
-	</div>
 </div>
 @endsection

@@ -973,6 +973,149 @@ box-shadow: 0 8px 6px -6px #adadad;
     font-size: 12px;
 }
 
+.stickycta {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 999;
+}
+
+
+.stickycta a{
+   display: block;
+  font-size: 40px;
+  margin-bottom: -10px;
+}
+.stickycta .wa{
+  color: #25d366;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 9px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+  border: 1px solid black;
+  /*opacity: 0.7;*/
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/*.slider:hover {
+  opacity: 1;
+}*/
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ae8d0b;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ae8d0b;
+  cursor: pointer;
+}
+
+.formFilter{
+  margin-top: 30px;
+}
+
+.formFilter label{
+   font-family: 'MoolBor', serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.formFilter label span{
+  font-family: 'Noto Sans JP', sans-serif;
+   color: #ae8d0b;
+  font-size: 14px;
+
+}
+
+.maxprice{
+  margin-top: 30px;
+}
+
+.formFilter select{
+  font-family: 'MoolBor', serif;
+    font-size: 21px;
+}
+
+.formFilter .bootstrap-select button{
+  border: 1px solid #ae8d0b;
+    background-color: #fff !important;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 11px 9px 0px;
+    color: black !important;
+    background-image: none !important;
+    font-family: 'MoolBor', serif;
+  -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-transform: uppercase;
+}
+
+.formFilter .bootstrap-select button:hover{
+  border: 1px solid #ae8d0b;
+    background-color: #fff !important;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding: 11px 9px 0px;
+    color: black !important;
+     background-image: none !important;
+     font-family: 'MoolBor', serif;
+  -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-transform: uppercase;
+}
+
+.formFilter  .bootstrap-select .dropdown-menu li a{
+   font-family: 'Noto Sans JP', sans-serif;
+   padding: 10px 20px;
+   font-size: 13px;
+}
+
+
+.filterbtns button{
+  color: #fff;
+    background: #ae8d0b;
+    font-family: 'MoolBor', serif;
+    padding: 12px 30px 6px 30px;
+    border-radius: 0px;
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 15px;
+    float: right;
+    margin-bottom: 30px;
+    border: 0;
+    margin-left: 10px;
+}
+
+#filtermodal .modal-body{
+  height: 400px;
+}
+
+#sortmodal .modal-body{
+  height: 175px;
+}
+
 @media screen and (max-width: 1200px){
   .footaddrs{
     line-height: 18px;

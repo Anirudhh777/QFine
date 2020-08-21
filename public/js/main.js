@@ -132,4 +132,30 @@ $( document ).ready(function() {
 	}
 
 	slide(0);
-	});
+
+	var slider = document.getElementById("myRange");
+	var output = document.getElementById("demo");
+	output.innerHTML = slider.value;
+
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
+
+	var slider1 = document.getElementById("myRange1");
+	var output1 = document.getElementById("demo1");
+	output1.innerHTML = slider1.value;
+
+	slider1.oninput = function() {
+	  output1.innerHTML = this.value;
+	}
+
+	$(".prop_type_opts").change(function(e){
+      prop_types = $(this).val();
+      $('.material_type').val(prop_types.toString());
+  });
+
+	$(".prop_type_opts1").change(function(e){
+      prop_types = $(this).val();
+      $('.color_filter').val(prop_types.toString());
+  });
+});
