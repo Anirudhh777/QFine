@@ -16,4 +16,9 @@ class RouteDataController extends Controller
 	{
 		return View::make('rings');
 	}
+
+	protected function fetchproduct()
+	{
+		return View::make('product');
+	}
 }

@@ -1,7 +1,15 @@
 $( document ).ready(function() {
 
 	var phrase = "qfjsp";
-	$('.owl-carousel').owlCarousel({
+	$('.owl-carousel-home').owlCarousel({
+		loop:true,
+		dots:false,
+		items:1,
+		singleItem:true,
+		stagePadding: 0,
+	})
+
+	$('.owl-carousel-product').owlCarousel({
 		loop:true,
 		dots:false,
 		items:1,
@@ -47,9 +55,9 @@ $( document ).ready(function() {
 			$('#countryUpdateModal').modal('show');
 		}).fail(function(status){ 
 			$('#countryModal').modal({
-			    backdrop: 'static',
-			    keyboard: false, 
-			    show: true
+				backdrop: 'static',
+				keyboard: false, 
+				show: true
 			})
 		});
 	}else{
@@ -58,44 +66,44 @@ $( document ).ready(function() {
 	}
 
 	$.validator.addMethod("notEqual", function(value, element, param) {
-	  return this.optional(element) || value != param;
+		return this.optional(element) || value != param;
 	}, "Please specify a different (non-default) value");
 
 	$("#countryselection").validate({
-    ignore: [],
-    rules: {
-      countryname: {
-        required: true,
-        notEqual: "disable"
-      }
-    },
-    submitHandler: function(form, event) {
-    	event.preventDefault();
-   		country = $("#countrylist1").val();
-   		setCookie('qfjucs', CryptoJS.AES.encrypt(country.toLowerCase(), phrase), 30);  
-   		$(".countryflag").attr("src", "assets/images/flags/"+country.toLowerCase().toString(CryptoJS.enc.Utf8)+".svg");
-   		$('#countryModal').modal('hide');
-   		return false;
-      }
-  });
+		ignore: [],
+		rules: {
+			countryname: {
+				required: true,
+				notEqual: "disable"
+			}
+		},
+		submitHandler: function(form, event) {
+			event.preventDefault();
+			country = $("#countrylist1").val();
+			setCookie('qfjucs', CryptoJS.AES.encrypt(country.toLowerCase(), phrase), 30);  
+			$(".countryflag").attr("src", "assets/images/flags/"+country.toLowerCase().toString(CryptoJS.enc.Utf8)+".svg");
+			$('#countryModal').modal('hide');
+			return false;
+		}
+	});
 
 	$("#countryupdate").validate({
-    ignore: [],
-    rules: {
-      countryname: {
-        required: true,
-        notEqual: "disable"
-      }
-    },
-    submitHandler: function(form, event) {
-    	event.preventDefault();
-   		country = $("#countrylist2").val();
-   		setCookie('qfjucs', CryptoJS.AES.encrypt(country.toLowerCase(), phrase), 30);  
-   		$(".countryflag").attr("src", "assets/images/flags/"+country.toLowerCase().toString(CryptoJS.enc.Utf8)+".svg");
-   		$('#countryUpdateModal').modal('hide');
-   		return false;
-      }
-  });
+		ignore: [],
+		rules: {
+			countryname: {
+				required: true,
+				notEqual: "disable"
+			}
+		},
+		submitHandler: function(form, event) {
+			event.preventDefault();
+			country = $("#countrylist2").val();
+			setCookie('qfjucs', CryptoJS.AES.encrypt(country.toLowerCase(), phrase), 30);  
+			$(".countryflag").attr("src", "assets/images/flags/"+country.toLowerCase().toString(CryptoJS.enc.Utf8)+".svg");
+			$('#countryUpdateModal').modal('hide');
+			return false;
+		}
+	});
 
 	$(".ship a").click(function(event){
 		event.preventDefault();
@@ -113,49 +121,64 @@ $( document ).ready(function() {
 			$(this).find("i").removeClass("fa-minus").addClass("fa-plus");
 		}
 	})
-	// basic paging logic to demo the buttons
-	var pr = document.querySelector( '.paginate.left' );
-	var pl = document.querySelector( '.paginate.right' );
 
-	pr.onclick = slide.bind( this, -1 );
-	pl.onclick = slide.bind( this, 1 );
+	if(window.location.pathname == "/rings"){
+   		// basic paging logic to demo the buttons
+   		var pr = document.querySelector( '.paginate.left' );
+   		var pl = document.querySelector( '.paginate.right' );
 
-	var index = 0, total = 5;
+   		pr.onclick = slide.bind( this, -1 );
+   		pl.onclick = slide.bind( this, 1 );
 
-	function slide(offset) {
-	  index = Math.min( Math.max( index + offset, 0 ), total - 1 );
+   		var index = 0, total = 5;
 
-	  document.querySelector( '.counter' ).innerHTML = ( index + 1 ) + ' / ' + total;
+   		function slide(offset) {
+   			index = Math.min( Math.max( index + offset, 0 ), total - 1 );
 
-	  pr.setAttribute( 'data-state', index === 0 ? 'disabled' : '' );
-	  pl.setAttribute( 'data-state', index === total - 1 ? 'disabled' : '' );
-	}
+   			document.querySelector( '.counter' ).innerHTML = ( index + 1 ) + ' / ' + total;
 
-	slide(0);
+   			pr.setAttribute( 'data-state', index === 0 ? 'disabled' : '' );
+   			pl.setAttribute( 'data-state', index === total - 1 ? 'disabled' : '' );
+   		}
 
-	var slider = document.getElementById("myRange");
-	var output = document.getElementById("demo");
-	output.innerHTML = slider.value;
+   		slide(0);
+   	}
 
-	slider.oninput = function() {
-	  output.innerHTML = this.value;
-	}
 
-	var slider1 = document.getElementById("myRange1");
-	var output1 = document.getElementById("demo1");
-	output1.innerHTML = slider1.value;
 
-	slider1.oninput = function() {
-	  output1.innerHTML = this.value;
-	}
 
-	$(".prop_type_opts").change(function(e){
-      prop_types = $(this).val();
-      $('.material_type').val(prop_types.toString());
-  });
+   	var slider = document.getElementById("myRange");
+   	var output = document.getElementById("demo");
+   	output.innerHTML = slider.value;
 
-	$(".prop_type_opts1").change(function(e){
-      prop_types = $(this).val();
-      $('.color_filter').val(prop_types.toString());
-  });
-});
+   	slider.oninput = function() {
+   		output.innerHTML = this.value;
+   	}
+
+   	var slider1 = document.getElementById("myRange1");
+   	var output1 = document.getElementById("demo1");
+   	output1.innerHTML = slider1.value;
+
+   	slider1.oninput = function() {
+   		output1.innerHTML = this.value;
+   	}
+
+   	$(".prop_type_opts").change(function(e){
+   		prop_types = $(this).val();
+   		$('.material_type').val(prop_types.toString());
+   	});
+
+   	$(".prop_type_opts1").change(function(e){
+   		prop_types = $(this).val();
+   		$('.color_filter').val(prop_types.toString());
+   	});
+
+   	$(".prodimg").click(function(){
+   		if(!$(this).hasClass("prodactive")){
+   			$(".prodmoreimg .prodactive").removeClass("prodactive");
+   			$(this).addClass("prodactive");
+   			$(".prodmainimg img").attr('src', $(this).attr("src"));
+   			;
+   		}
+   	})
+   });

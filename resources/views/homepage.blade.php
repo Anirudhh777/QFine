@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="banner">
-  <div class="owl-carousel">
+  <div class="owl-carousel owl-carousel-home">
     <div class="holder">
      <img src="{{ asset('assets/images/image1-min.jpg') }}">
      <a href="">DISCOVER</a>

@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('/ip_check', 'FrontendController@ip_check')->name("ip_check");
 
 Route::get('/rings', 'RouteDataController@fetchrings')->name("rings");
+
+Route::get('/product', 'RouteDataController@fetchproduct')->name("product");

@@ -1116,6 +1116,206 @@ box-shadow: 0 8px 6px -6px #adadad;
   height: 175px;
 }
 
+.productmain{
+  width: 100%;
+    position: absolute;
+    top: 12vh;
+    padding: 50px 30px 30px 30px;
+}
+
+.productinner{
+  position: relative;
+  padding-top: 30px;
+}
+
+.prodmainimg{
+  display: inline-block;
+  width: 70%;
+  height: 400px;
+  float: right;
+}
+
+.prodmoreimg{
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.prodmoreimg img{
+  width: 85%;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.prodmainimg img{
+  width: 100%;
+  height: -webkit-fill-available !important;
+}
+
+
+.prodactive{
+  filter: brightness(0.5);
+}
+
+.prodplay{
+  position: relative;
+  width: 85%;
+    border: 1px solid #eaeaea;
+    margin: 0 auto;
+    height: 108px;
+    cursor: pointer;
+}
+
+.prodplay img{
+  width: 38% !important;
+  margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.prodinfo{
+  height: 400px;
+  position: relative;
+}
+
+.prodinfo h1{
+  position: relative;
+  text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    width: fit-content;
+}
+
+
+.prodinfo h1::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  background: #ae8d0b;
+}
+
+.prodinfo p{
+   font-family: Raleway;
+   font-size: 13px;
+}
+
+.prodinfo h2{
+   font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.prodinfo h2 span{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+    font-weight: 600;
+}
+
+.productcta{
+ position: absolute;
+    bottom: 2px;
+    width: 100%;
+}
+
+.productcta a{
+  background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    display: block;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    padding: 8px 30px 0px 30px;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.prodguides{
+  width: fit-content;
+    float: right;
+    padding-right: 6px;
+}
+
+.prodguides a{
+  font-size: 16px;
+    color: #ae8d0b;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.prodinfobottom{
+  margin-top: 40px;
+}
+
+.prodinfobottom h2{
+  position: relative;
+  font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    width: 100%;
+}
+
+.prodinfobottom h2::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  background: black;
+}
+
+.prodinfobottom h4{
+  font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 6px 0px;
+}
+
+.prodinfobottom h4 span{
+  font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+}
+
+.prodinfobottom p{
+  font-family: Raleway;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.prodsocial{
+  padding: 0;
+}
+
+.prodsocial li{
+  width: fit-content;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.prodsocial li a i{
+  font-size: 18px;
+}
+
+.prodfix {
+        position: sticky;
+       top: 20vh;
+        width: 56%;
+}
+.prodscroll {
+        float: right;
+        width: 43%
+}
+
 @media screen and (max-width: 1200px){
   .footaddrs{
     line-height: 18px;
