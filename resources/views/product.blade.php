@@ -4,7 +4,7 @@
 
 <div class="productmain">
 	<div class="productinner">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-7 col-sm-12 prodfix">
 					<div class="">
@@ -18,10 +18,20 @@
 						</div>
 						<div class="prodmainimg">
 							<img src="{{ asset('/assets/images/products/product1.jpg') }}">
-							<div class="prodguides">
-								<a href="">Size Guide</a>
-								<span> | </span>
-								<a href="">Shipping</a>
+						</div>
+						<div class="prodmoreimgmob">
+							<div class="owl-carousel owl-carousel-product">
+								<div class="holder">
+									<img src="{{ asset('/assets/images/products/product1.jpg') }}">
+								</div>
+								<div class="holder">
+									<img src="{{ asset('/assets/images/products/product2.jpg') }}">
+								</div>
+								<div class="holder">
+									<div class="prodplay">
+										<img src="{{ asset('/assets/images/play-arrow.png') }}">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -43,6 +53,11 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo ornare lectus facilisis luctus. Aliquam iaculis malesuada leo eu aliquam.</p>
 					</div>
 					<div class="prodinfobottom">
+						<h2>Sizes</h2>
+						<p>Our sizes follow etc etc write up. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo ornare lectus facilisis luctus. </p>
+						<a href="" class="prodguides">View Size Guide <i class="fa fa-angle-double-right"></i></a>
+					</div>
+					<div class="prodinfobottom">
 						<h2>Specifications</h2>
 						<h4>Metal: <span>Gold</span></h4>
 						<h4>Gross Weight: <span>30gms</span></h4>
@@ -60,9 +75,40 @@
 							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
 					</div>
+					<div class="prodinfobottom">
+						<h2>Shipping</h2>
+						<p>Brief content about shipping guidlines with a link to the main Shipping Page. </p>
+						<a href="" class="prodguides">View Shipping Guidlines <i class="fa fa-angle-double-right"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="deals">
+		<div class="container text-center">
+			<h1>Related Products</h1>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<img src="{{ asset('assets/images/IMG_0134-min.jpg') }}">
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<img src="{{ asset('assets/images/IMG_0134-min.jpg') }}">
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<img src="{{ asset('assets/images/IMG_0237-min.jpg') }}">
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 demohide">
+					<img src="{{ asset('assets/images/IMG_0134-min.jpg') }}">
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 demohide">
+					<img src="{{ asset('assets/images/IMG_0134-min.jpg') }}">
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 demohide">
+					<img src="{{ asset('assets/images/IMG_0237-min.jpg') }}">
+				</div>
+			</div>
+			<a href="#" class="relloadmore">Load More</a>
+		</div>    
 	</div>
 	@include('footer')
 </div>

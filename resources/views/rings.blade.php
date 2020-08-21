@@ -21,7 +21,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -43,7 +43,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product2.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -63,7 +63,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -83,7 +83,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -103,7 +103,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product2.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -125,7 +125,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -145,7 +145,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -165,7 +165,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product2.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>
@@ -185,7 +185,7 @@
 					<div class="flip-card-back">
 						<img src="{{ asset('/assets/images/products/product1.jpg') }}" class="prodimg1">
 						<div class="flipcta">
-							<a href="">View</a>
+							<a href="{{ url('/product') }}">View</a>
 							<a href="">Enquire Via WhatsApp</a>
 							<a href="">Add to Cart</a>
 						</div>

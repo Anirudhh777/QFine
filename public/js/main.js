@@ -15,6 +15,7 @@ $( document ).ready(function() {
 		items:1,
 		singleItem:true,
 		stagePadding: 0,
+		nav: true
 	})
 
 	function getCookie(cname) {
@@ -180,5 +181,11 @@ $( document ).ready(function() {
    			$(".prodmainimg img").attr('src', $(this).attr("src"));
    			;
    		}
+   	})
+
+   	$(".relloadmore").click(function(e){
+   		e.preventDefault();
+   		$(this).hide();
+   		$(".demohide").show();
    	})
    });
