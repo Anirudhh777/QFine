@@ -557,10 +557,14 @@ box-shadow: 0 8px 6px -6px #adadad;
     margin: 0 auto;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 15px;
+    font-size: 16px;
     float: right;
     margin-bottom: 30px;
+    text-shadow: initial;
+    border: none !important;
+    margin-left: 15px;
   }
+
 
   .ringsmain{
     width: 100%;
@@ -986,10 +990,13 @@ box-shadow: 0 8px 6px -6px #adadad;
 .stickycta a{
  display: block;
  font-size: 40px;
- margin-bottom: -10px;
 }
 .stickycta .wa{
   color: #25d366;
+}
+
+.stickycta img{
+  width: 50px;
 }
 
 .slidecontainer {
@@ -1103,11 +1110,14 @@ box-shadow: 0 8px 6px -6px #adadad;
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 15px;
+  font-size: 16px;
   float: right;
   margin-bottom: 30px;
   border: 0;
   margin-left: 10px;
+  text-shadow: initial;
+    border: none !important;
+    margin-left: 15px;
 }
 
 #filtermodal .modal-body{
@@ -1355,6 +1365,18 @@ box-shadow: 0 8px 6px -6px #adadad;
     margin-top: 50px;
 }
 
+.prodsocial .fa-whatsapp {
+    color: #206720;
+}
+
+.prodsocial  .fa-facebook{
+  color: #1b487f;
+}
+
+.prodsocial .fa-twitter {
+    color: #0e76a8;
+}
+
 @media screen and (max-width: 1200px){
   .footaddrs{
     line-height: 18px;
@@ -1533,7 +1555,7 @@ box-shadow: 0 8px 6px -6px #adadad;
   bottom: 27px;
 }
 .ringsmain .prodimg{
-  width: 101%;
+  width: 100%;
 }
 
  .productmain .deals img{

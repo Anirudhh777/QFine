@@ -174,7 +174,7 @@ $( document ).ready(function() {
    		$('.color_filter').val(prop_types.toString());
    	});
 
-   	$(".prodimg").click(function(){
+   	$(".prodmoreimg .prodimg").click(function(){
    		if(!$(this).hasClass("prodactive")){
    			$(".prodmoreimg .prodactive").removeClass("prodactive");
    			$(this).addClass("prodactive");

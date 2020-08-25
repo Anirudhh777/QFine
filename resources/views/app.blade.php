@@ -124,8 +124,10 @@
       </div>
     </div>
     <div class="stickycta">
-      <a href="" class="wa"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-      <a href="" class="chat"><i class="fa fa-envelope"></i></a>
+       <a href="" class="wa"><img src="{{ asset('assets/images/whatsapp1.png') }}"></a>
+      <a href="" class="chat"><img src="{{ asset('assets/images/mail.png') }}"></a>
+    <!--   <a href="" class="wa"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="" class="chat"><i class="fa fa-envelope"></i></a> -->
     </div>
     @yield('content')
     <div id="countryModal" class="modal fade modalstyle" role="dialog">
