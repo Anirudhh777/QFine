@@ -21,3 +21,10 @@ Route::get('/ip_check', 'FrontendController@ip_check')->name("ip_check");
 Route::get('/rings', 'RouteDataController@fetchrings')->name("rings");
 
 Route::get('/product', 'RouteDataController@fetchproduct')->name("product");
+
+Route::get('/product1', 'RouteDataController@fetchproduct1')->name("product1");
+
+
+Route::get('/imagemap', function () {
+    return view('image-map');
+});

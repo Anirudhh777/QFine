@@ -1,6 +1,29 @@
 $( document ).ready(function() {
 
+	 $(".img-map").jMap();
+	 $(".img-map1").jMap();
+	 $(".img-map2").jMap();
+   	 $('[data-toggle="popover"]').popover({ html : true, trigger: 'manual' });
+
+   	 $('[data-toggle="popover"]').click(function (e) {
+   	 	e.preventDefault();
+        $(this).popover('toggle');
+		$('[data-toggle="popover"]').not(this).each(function(){
+           $(this).popover('hide');
+       }); 
+       
+    });    
+
+	$('[data-toggle="popover"]').on('shown.bs.popover', function () {
+		$(this).find("img").attr('src', '/assets/images/popclose.png');
+	})
+
+	 $('[data-toggle="popover"]').on('hidden.bs.popover', function () {
+		 $(this).find("img").attr('src', '/assets/images/dot.png');
+	})
+
 	var phrase = "qfjsp";
+
 	$('.owl-carousel-home').owlCarousel({
 		loop:true,
 		dots:false,
@@ -45,8 +68,6 @@ $( document ).ready(function() {
 	function capitalizeFirstLetter(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
-
-
 
 	if(getCookie("qfjucs") == false){
 		$.get("/ip_check", function(data){
@@ -183,9 +204,42 @@ $( document ).ready(function() {
    		}
    	})
 
+   	 	$(".prodmoreimg1 .prodimg").click(function(){
+   		if(!$(this).hasClass("prodactive")){
+   			$(".prodmoreimg1 .prodactive").removeClass("prodactive");
+   			$(this).addClass("prodactive");
+   			$(".prodmainimg1 img").attr('src', $(this).attr("src"));
+   			;
+   		}
+   	})
+
    	$(".relloadmore").click(function(e){
    		e.preventDefault();
    		$(this).hide();
    		$(".demohide").show();
    	})
+
+   	 $(".collsubmenu").click(function(e){
+   	 	if($(this).hasClass("collsubmenucl")){
+   	 		$(this).removeClass("collsubmenucl");
+   	 		$(".menu-one").slideDown("slow", "linear");
+   	 	}else{
+   	 		$(this).addClass("collsubmenucl");
+   	 		$(".menu-one").slideUp("slow", "linear");
+   	 	}
+	   	 	$(this).next('ul').toggle();
+		    e.stopPropagation();
+		    e.preventDefault();
+   	 	
+   	 })
+
+   	  $('[data-toggle="dropdown"]').click(function (e) {
+   	  	if($(".collsubmenu").hasClass("collsubmenucl")){
+   	  		$(".collsubmenucl").removeClass("collsubmenucl");
+	   	 	$(".menu-one").show();
+	   	 	$(".dropdown-submenu .dropdown-menu").hide();
+   	  	}
+	});
+
+
    });

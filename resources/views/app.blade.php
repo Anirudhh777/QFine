@@ -11,6 +11,7 @@
 
   <title>Q Fine</title>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -28,8 +29,8 @@
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js" integrity="sha512-eqbQu9UN8zs1GXYopZmnTFFtJxpZ03FHaBMoU3dwoKirgGRss9diYqVpecUgtqW2YRFkIVgkycGQV852cD46+w==" crossorigin="anonymous"></script>
+  <script src="{{ asset('js/jquery.jmap.min.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-
 </head>
 <body>
   <div class="topfix">
@@ -65,69 +66,61 @@
           <button class="dropdown-toggle" type="button" data-toggle="dropdown">SHOP
             <i class="fa fa-caret-down"></i></button>
             <ul class="dropdown-menu">
-              <li><a href="{{ url('/rings') }}">Rings</a></li>
-              <li><a href="#">Earings</a></li>
-              <li><a href="#">Necklace</a></li>
-              <li><a href="#">Bracelet</a></li>
-              <li><a href="#">Bridal</a></li>
-              <li><a href="#">Baby</a></li>
-              <li><a href="#">Collections</a></li>
+              <li class="menu-one"><a href="{{ url('/rings') }}">Rings</a></li>
+              <li class="menu-one"><a href="#">Earings</a></li>
+              <li class="menu-one"><a href="#">Necklace</a></li>
+              <li class="menu-one"><a href="#">Bracelet</a></li>
+              <li class="menu-one"><a href="#">Bridal</a></li>
+              <li class="menu-one"><a href="#">Baby</a></li>
+              <li class="menu-one"><a href="#">Others</a></li>
+
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="#" class="collsubmenu">Collections <i class="fa fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                   <li><a href="#">Oblong</a></li>
+                    <li><a href="#">Dew Droplet</a></li>
+                     <li><a href="#">Princess</a></li>
+                     <li><a href="#">Mooqueen</a></li>
+                     <li><a href="#">Amore</a></li>
+                     <li><a href="#">Ovalon</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <div class="dropdown">
             <button class="dropdown-toggle" type="button" data-toggle="dropdown">SERVICES
               <i class="fa fa-caret-down"></i></button>
               <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">View at Home</a></li>
+                <li><a href="#">Visit Store</a></li>
+                <li><a href="#">Custom</a></li>
               </ul>
             </div>
             <div class="dropdown">
-              <button class="dropdown-toggle" type="button" data-toggle="dropdown">TRENDING
-                <i class="fa fa-caret-down"></i></button>
-                <ul class="dropdown-menu">
+              <button class="dropdown-toggle" type="button">TRENDING</button>
+                <!-- <ul class="dropdown-menu">
                   <li><a href="#">HTML</a></li>
                   <li><a href="#">CSS</a></li>
                   <li><a href="#">JavaScript</a></li>
-                </ul>
+                </ul> -->
               </div>
               <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-toggle="dropdown">GIFTING
                   <i class="fa fa-caret-down"></i></button>
                   <ul class="dropdown-menu">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Upto 1000</a></li>
+                    <li><a href="#">Upto 2000</a></li>
+                    <li><a href="#">Upto 3000</a></li>
                   </ul>
                 </div>
               </div>
 
-         <!--  <ul class="right">
-            <li class="dropdown"><a href="#" class="dropdown-toggle"  data-toggle="dropdown">SHOP <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="">SERVICES <i class="fa fa-caret-down"></i></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">HTML</a></li>
-                  <li><a href="#">CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                </ul>
-            </li>
-            <li><a href="">TRENDING <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="">GIFTING <i class="fa fa-caret-down"></i></a></li>
-            <li><a href="">GIFTS </a></li>
-            <li><a href="">CUSTOMIZE </a></li>
-            <li><a href="">DEMO</a></li>
-            <li><a href="">CONTACT</a></li>
-
-          </ul> -->
         </div>
       </div>
     </div>
     <div class="stickycta">
        <a href="" class="wa"><img src="{{ asset('assets/images/whatsapp1.png') }}"></a>
-      <a href="" class="chat"><img src="{{ asset('assets/images/mail.png') }}"></a>
-    <!--   <a href="" class="wa"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-      <a href="" class="chat"><i class="fa fa-envelope"></i></a> -->
+      <a href="" class="chat"><img src="{{ asset('assets/images/instagram.png') }}"></a>
     </div>
     @yield('content')
     <div id="countryModal" class="modal fade modalstyle" role="dialog">

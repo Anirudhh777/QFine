@@ -22,7 +22,7 @@ a:focus {outline: none; text-decoration: none;}
 .topfix{
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 1000;
 }
 .header{
   height: 6vh;
@@ -112,12 +112,29 @@ a:focus {outline: none; text-decoration: none;}
   font-family: 'MoolBor', serif;
   letter-spacing: 2px;
   color: #000000;
+  padding: 0px 20px;
 }
 
 .menu .dropdown{
   width: fit-content;
   display: inline-block;
   margin: 0px 0px 0px 30px;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu a i{
+  vertical-align: middle;
+    margin-bottom: 0.4px;
+    margin-left: 11px;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  /*left: 100%;*/
+  margin-top: -1px;
 }
 /*
 .menu ul li{
@@ -139,12 +156,16 @@ a:focus {outline: none; text-decoration: none;}
     font-weight: initial; 
   }
 
+  .prodsize  .dropdown-menu{
+    z-index: 1200;
+  }
   .dropdown-menu{
-    top: 86% !important;
+    top: 95% !important;
     border:none !important;
     border-radius: initial !important;
     margin: 0 !important;
     padding: 0px !important;
+    z-index: initial;
   }
 
 /*.menu ul{
@@ -160,7 +181,7 @@ a:focus {outline: none; text-decoration: none;}
     font-family: 'MoolBor', serif;
     letter-spacing: 2px;
     color: #000000;
-    padding: 12px 20px 6px 20px !important;
+   padding: 8px 20px 4px 20px !important;
     /*font-weight: 500;*/
   }
   .menu button i{
@@ -981,9 +1002,10 @@ box-shadow: 0 8px 6px -6px #adadad;
 
 .stickycta {
   position: fixed;
-  right: 20px;
-  bottom: 10px;
+  right: 0;
   z-index: 999;
+  top: 50%;
+  transform: translate(-50%, -50%)
 }
 
 
@@ -996,7 +1018,7 @@ box-shadow: 0 8px 6px -6px #adadad;
 }
 
 .stickycta img{
-  width: 50px;
+  width: 35px;
 }
 
 .slidecontainer {
@@ -1060,12 +1082,12 @@ box-shadow: 0 8px 6px -6px #adadad;
   margin-top: 30px;
 }
 
-.formFilter select{
+.formFilter select, .prodsize select{
   font-family: 'MoolBor', serif;
   font-size: 21px;
 }
 
-.formFilter .bootstrap-select button{
+.formFilter .bootstrap-select button, .prodsize .bootstrap-select button{
   border: 1px solid #ae8d0b;
   background-color: #fff !important;
   letter-spacing: 1px;
@@ -1079,7 +1101,7 @@ box-shadow: 0 8px 6px -6px #adadad;
   text-transform: uppercase;
 }
 
-.formFilter .bootstrap-select button:hover{
+.formFilter .bootstrap-select button:hover, .prodsize .bootstrap-select button:hover{
   border: 1px solid #ae8d0b;
   background-color: #fff !important;
   letter-spacing: 1px;
@@ -1093,10 +1115,22 @@ box-shadow: 0 8px 6px -6px #adadad;
   text-transform: uppercase;
 }
 
-.formFilter  .bootstrap-select .dropdown-menu li a{
+.formFilter  .bootstrap-select .dropdown-menu li a, .prodsize .bootstrap-select .dropdown-menu li a{
  font-family: 'Noto Sans JP', sans-serif;
  padding: 10px 20px;
  font-size: 13px;
+}
+
+.prodsize .bootstrap-select.form-control{
+  width: 50% !important;
+}
+
+.prodsize .bootstrap-select .dropdown-menu{
+  top: 100% !important;
+}
+
+.prodsize{
+  margin-top: 12px;
 }
 
 
@@ -1167,6 +1201,55 @@ box-shadow: 0 8px 6px -6px #adadad;
   object-fit: cover;
 }
 
+.prodmainimg1{
+  display: inline-block;
+  width: 65%;
+  height: 425px;
+  float: right;
+}
+
+.prodmoreimg1{
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+}
+
+.prodmoreimg1 img{
+  width: 45%;
+ margin: 0px 4px 16px 4px;
+  cursor: pointer;
+  height: initial !important;
+  object-fit: cover;
+}
+
+.prodmainimg1 img{
+  width: 100%;
+  height: -webkit-fill-available !important;
+  object-fit: cover;
+}
+
+.prodplay1{
+  position: relative;
+    width: 48%;
+    border: 1px solid #eaeaea;
+    margin: 0 auto;
+    height: 95px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.prodplay1 img{
+  width: 25% !important;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: initial !important;
+}
+
 
 .prodactive{
   filter: brightness(0.5);
@@ -1222,16 +1305,67 @@ box-shadow: 0 8px 6px -6px #adadad;
 }
 
 .prodinfo h2{
- font-family: 'Raleway', sans-serif;
- font-size: 16px;
+ font-family: 'Noto Sans JP', sans-serif;
+ font-size: 14px;
  letter-spacing: 1px;
  text-transform: uppercase;
+ width: fit-content;
+    display: inline-block;
 }
 
 .prodinfo h2 span{
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
+}
+
+.wishlist{
+  width: fit-content;
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.wishlist img{
+  display: inline-block;
+    width: 17px;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+.wishlist a{
+  color: black !important;
+}
+
+.wishlist h4{
+  display: inline-block;
+  width: fit-content;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.wishdivide{
+   font-family: 'Noto Sans JP', sans-serif;
+  margin-left: 2%;
+  font-size: 16px;
+}
+
+.metalcolor{
+  margin-top: 24px;
+}
+
+.metalcolor h4{
+   font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.metalcolor h4 span{
+ /* font-family: Raleway;
+    font-size: 15px;*/
+    color: #7d7d7d;
 }
 
 .productcta{
@@ -1377,6 +1511,158 @@ box-shadow: 0 8px 6px -6px #adadad;
     color: #0e76a8;
 }
 
+.custom-radios div {
+   display: inline-block;
+}
+ .custom-radios input[type="radio"] {
+   display: none;
+}
+ .custom-radios input[type="radio"] + label {
+   color: #333;
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+}
+ .custom-radios input[type="radio"] + label span {
+   display: inline-block;
+   width: 27px;
+   height: 27px;
+   margin: -1px 4px 0 0;
+   vertical-align: middle;
+   cursor: pointer;
+   border-radius: 50%;
+   border: 2px solid #fff;
+   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+   background-repeat: no-repeat;
+   background-position: center;
+   text-align: center;
+   line-height: 22px;
+}
+ .custom-radios input[type="radio"] + label span img {
+   opacity: 0;
+   transition: all 0.3s ease;
+   width: 54%;
+}
+ .custom-radios input[type="radio"]#color-1 + label span {
+   background-color: #ae8d0b;
+}
+ .custom-radios input[type="radio"]#color-2 + label span {
+   background-color: #C0C0C0;
+}
+ .custom-radios input[type="radio"]#color-3 + label span {
+   background-color: #b76e79;
+}
+ .custom-radios input[type="radio"]#color-4 + label span {
+   background-color: #000000;
+}
+ .custom-radios input[type="radio"]:checked + label span img {
+   opacity: 1;
+}
+
+.imagemap{
+  width: 100%;
+    position: absolute;
+    top: 15vh;
+    padding: 30px 0px;
+     height: 85vh;
+}
+
+.imagehold{
+  position: relative;
+    width: 100%;
+}
+
+.imagehold img{
+  width: 350px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.imagecord{
+  height: 20vh;
+}
+
+.popover>.arrow{
+  display: none;
+}
+
+.popover-content {
+    padding: 0px !important;
+}
+
+.popover{
+  z-index: 2 !important;
+     border: initial !important;
+     border: initial !important;
+    border-radius: 2px !important;
+     -webkit-box-shadow: initial !important;
+     box-shadow: initial !important;
+     line-break:initial !important;
+     background: rgba(0, 0, 0, 0.5) !important;
+}
+
+#popclose{
+  position: absolute;
+    right: 5px;
+    font-size: 16px !important;
+     font-weight: 200 !important; 
+     text-shadow: initial !important;
+    filter: initial !important;
+     opacity: initial !important;
+}
+
+.popoverinner{
+  padding: 10px 15px;
+  width: 210px;
+  height: 65px;
+}
+
+.popoverinner h1{
+  color: #fff;
+   margin: 0;
+   font-size: 22px;
+   position: relative;
+   width: fit-content;
+   opacity: 1;
+   margin: 0 auto;
+}
+
+.popoverinner h1::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    background: #ae8d0b;
+}
+
+.popoverinner h2{
+  color: #fff;
+    font-size: 21px;
+    margin: 0;
+    opacity: 1;
+    letter-spacing: 0.6px;
+    width: fit-content;
+    display: inline-block;
+    position: absolute;
+    left: 23px;
+    bottom: 5px;
+}
+
+.popoverimg{
+  width: 19px !important;
+    object-fit: initial !important;
+    height: initial !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    position: absolute !important;
+    right: 23px !important;
+}
+
+.imagehold{
+    margin-bottom: 30px;
+  }
+
 @media screen and (max-width: 1200px){
   .footaddrs{
     line-height: 18px;
@@ -1476,6 +1762,15 @@ box-shadow: 0 8px 6px -6px #adadad;
 
   .productmain .deals img{
     width: 75%;
+  }
+
+  .imagehold{
+    margin-bottom: 20px;
+  }
+
+  .dropdown-menu{
+    left: -55%;
+    min-width: 142px;
   }
 }
 
@@ -1591,5 +1886,9 @@ box-shadow: 0 8px 6px -6px #adadad;
 
   .prodinfo p{
     font-size: 12px;
+  }
+
+  .wishlist h4{
+    display: none;
   }
 }
