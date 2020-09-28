@@ -20,18 +20,28 @@
 							<img src="{{ asset('/assets/images/products/product1.jpg') }}">
 						</div>
 						<div class="prodmoreimgmob">
-							<div class="owl-carousel owl-carousel-product">
-								<div class="holder">
+							<!-- <div class="owl-carousel owl-carousel-product"> -->
+							<div>
+								<div class="holder text-center">
 									<img src="{{ asset('/assets/images/products/product1.jpg') }}">
 								</div>
-								<div class="holder">
+								<!-- <div class="holder">
 									<img src="{{ asset('/assets/images/products/product2.jpg') }}">
 								</div>
 								<div class="holder">
 									<div class="prodplay">
 										<img src="{{ asset('/assets/images/play-arrow.png') }}">
 									</div>
-								</div>
+								</div> -->
+							</div>
+							<div class="prodimgmobtnhold text-center">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product1.jpg') }}">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product2.jpg') }}">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product1.jpg') }}">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product2.jpg') }}">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product1.jpg') }}">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product2.jpg') }}">
+								<img class="prodimgmobtn" src="{{ asset('/assets/images/products/product1.jpg') }}">
 							</div>
 						</div>
 					</div>
@@ -80,14 +90,14 @@
 											</label>
 										</div>
 
-										<div>
+										<!-- <div>
 											<input type="radio" id="color-4" name="color" value="color-4">
 											<label for="color-4">
 												<span>
 													<img src="{{ asset('/assets/images/tick.svg') }}">
 												</span>
 											</label>
-										</div>
+										</div> -->
 									</div>
 									<h4>Color : <span>Gold</span></h4>
 								</div>

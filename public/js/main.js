@@ -241,5 +241,8 @@ $( document ).ready(function() {
    	  	}
 	});
 
+   	 $(".prodimgmobtn").click(function(e) {
+   	 	$(".prodmoreimgmob .holder img").attr('src', $(this).attr("src"));
+   	 })
 
    });

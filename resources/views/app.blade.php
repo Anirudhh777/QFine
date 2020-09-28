@@ -44,7 +44,7 @@
           <li><a href=""><img src="{{ asset('assets/images/global.png') }}"></a></li>
           <li><a href=""><img src="{{ asset('assets/images/english.png') }}" class="lang"></a></li>
         </ul> -->
-        <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logo.png') }}" class="logo"></a>
+        <a href="{{ url('/') }}"><img src="{{ asset('assets/images/logo1.png') }}" class="logo"></a>
         <ul class="right">
          <li class="ship"><a href="#"><img src="{{ asset('assets/images/flags/united-arab-emirates.svg') }}" class="countryflag"></a></li>
          <!-- <li><a href=""> کرنسی <img src="{{ asset('assets/images/global.png') }}"></a></li> -->
@@ -77,9 +77,9 @@
               <li class="dropdown-submenu">
                 <a tabindex="-1" href="#" class="collsubmenu">Collections <i class="fa fa-caret-down"></i></a>
                 <ul class="dropdown-menu">
-                   <li><a href="#">Oblong</a></li>
-                    <li><a href="#">Dew Droplet</a></li>
-                     <li><a href="#">Princess</a></li>
+                   <li><a href="{{ url('/imagemap') }}">Oblong</a></li>
+                    <li><a href="{{ url('/imagemap') }}">Dew Droplet</a></li>
+                     <li><a href="{{ url('/imagemap') }}">Princess</a></li>
                      <li><a href="#">Mooqueen</a></li>
                      <li><a href="#">Amore</a></li>
                      <li><a href="#">Ovalon</a></li>
@@ -110,7 +110,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="#">Upto 1000</a></li>
                     <li><a href="#">Upto 2000</a></li>
-                    <li><a href="#">Upto 3000</a></li>
+                    <li><a href="#">Upto 3000 & More</a></li>
                   </ul>
                 </div>
               </div>
@@ -165,16 +165,16 @@
            <!--  <label for="sel1">Select list:</label> -->
            <select class="form-control" id="countrylist2" name="countryname">
             <option value="-" disabled="" selected="">-</option>
-            <option value="india">India</option>
-            <option value="united-arab-emirates">UAE</option>
-            <option value="united-states-of-america">USA</option>
+            <option value="india" id="INDIA">India</option>
+            <option value="united-arab-emirates" id="UAE">UAE</option>
+            <option value="united-states-of-america" id="">USA</option>
             <option value="united-kingdom">United Kingdom</option>
             <option value="qatar">Qatar</option>
             <option value="kuwait">Kuwait</option>
           </select>
         </div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-default">Update</button>
+        <button type="submit" class="btn btn-default">Select</button>
       </form>
     </div>
 
@@ -203,11 +203,14 @@
           </div>
           <div class="maxprice">
            <input type="hidden" name="material_type" class="material_type">
-           <select class="selectpicker form-control res-opts prop_type_opts" multiple title="Select Material">
-             <option disabled="">Select Material</option>
-            <option value="Gold">Gold</option>
-            <option value="Silver">Silver</option>
-            <option value="Platinum">Platinum</option>
+           <select class="selectpicker form-control res-opts prop_type_opts" multiple title="Select Collection">
+             <option disabled="">Select Collection</option>
+            <option value="Gold">Oblong</option>
+            <option value="Silver">Drew Droplet</option>
+            <option value="Platinum">Princess</option>
+            <option value="Gold">Mooqueen</option>
+            <option value="Silver">Amore</option>
+            <option value="Platinum">Ovalon</option>
           </select>
         </div>
         <div class="maxprice">
@@ -217,6 +220,14 @@
             <option value="Rose">Rose</option>
             <option value="White">White</option>
             <option value="Yellow">Yellow</option>
+          </select>
+        </div>
+          <div class="maxprice">
+           <input type="hidden" name="material_type" class="material_type">
+           <select class="selectpicker form-control res-opts prop_type_opts" multiple title="Select Size">
+             <option disabled="">Select Size</option>
+            <option value="Gold">Size 1</option>
+            <option value="Silver">Size 2</option>
           </select>
         </div>
         <div class="maxprice filterbtns">
